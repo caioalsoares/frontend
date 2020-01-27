@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,600&display=swap');
+
+* {
+  font-family: Nunito;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #5376D6;
+}
+
+a:hover {
+  color:#344b8a;
+}
+
+body {
+  margin: 80px;
+  background: #3A61CA;
+}
+
+
+#content {
+  border-radius: 7px;
+  background: #FFF;
+  overflow: auto;
+}
+
+#lateral {
+  background: #ECB42B;
+  width:40%;
+  height:100%;
+  float:left;
+  display: flex;
+  align-self: flex-end;
+}
+
+#lateral img {
+  width: 100%;
+  height: auto;
+}
+
+#form {
+  float: right;
+  width: 60%;
+  position: bottom;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+#formulario {
+  margin:50px;
+  margin-bottom:15px;
+  border-bottom:1px solid #D0D0D0;
+  padding-bottom:15px;
+  margin-top:30px;
+  box-sizing: border-box;
+}
+
+.txt {
+    padding:15px;
+    border-radius: 30px;
+    border: 1px solid #D0D0D0	;
+    font-size: 15px;
+    margin-bottom:15px;
+    font-weight: 600;
+}
+
+.txt:hover {
+  border-color: #5376D6;
+}
+
+.txt:focus {
+  outline:none;
+  border: #5376D6 1px solid;
+}
+
+.erro, .erro:hover, .erro:focus
+ { 
+  border:1px solid red;
+}
+
+#erromsg {
+  color: red;
+  float: right;
+  margin-right: 90px;
+  margin-top: -15px;
+  display: none;
+}
+
+
+#email {
+  box-sizing: border-box;
+  width:100%;
+}
+
+#fone, #rpswd {
+  float:right;
+  width: 44%;
+}
+
+#alerta {
+  background-color: black 30%;
+}
+
+#nome, #pswd {
+  float: left;
+  width: 44%;
+}
+.botao {
+  color: #FFF;
+  font-weight: 600;
+  cursor: pointer;
+  padding:20px;
+  border-radius: 30px;
+  font-size: 15px;
+  margin-top:15px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.botao img {
+  vertical-align: bottom;
+  margin-right:3px;
+}
+
+
+#registrar {
+  background-color: #5376D6;
+  border: hidden;
+}
+
+#registrar:disabled, #registrar:disabled:hover {
+  background-color: silver;
+}
+
+#registrar:hover {
+  background-color: #344b8a;
+}
+
+#redes {
+  margin-left: 50px;
+  margin-right: 50px;
+  border-bottom:1px solid #D0D0D0;
+  margin-bottom: 15px;
+  padding-bottom: 25px;
+
+}
+#google {
+  background-color: red;
+  border: 0px;
+  outline:none;
+}
+
+#google:hover {
+  background-color: #c20f02;
+}
+
+#fb {
+  background-color: #344b8a;
+  border: 0px;
+  outline: none;
+}
+
+#fb:hover {
+  background-color: #213363;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="mask/src/jquery.mask.js"></script>
+
+    <script>
+    $(document).ready(function(){
+      $('.phone').mask('(99) 9 9999-9999');
+    });
+
+    function senha() {
+
+      var senha = $("#pswd").val();
+      var nsenha = $("#rpswd").val();
+
+      if(senha != "" && nsenha != "") {
+        if(senha != nsenha) {
+          $("#rpswd").addClass('erro');
+          $("#erromsg").css("display", "inline");
+
+          $('#registrar').prop("disabled", true);
+
+      }else {
+        $("#rpswd").removeClass('erro');
+        $("#erromsg").css("display", "none");
+
+        $('#registrar').prop("disabled", false);
+
+        }
+      }
+    }
+
+    function dados() {
+      var nome = $("#nome").val();
+      var fone = $("#fone").val();
+      var email = $("#email").val();
+      var senha = $("#pswd").val();
+      var nsenha = $("#rpswd").val();
+
+      alert("Nome: " + nome + "\nTelefone: " + fone + "\nEmail: " + email + "\nSenha: " + senha);
+    }
+    </script>
+  </head>
+  <body>
+<div id="content">
+  <div id="lateral">
+    <img src="curious-pug-pet.jpg">
+  </div>
+  <div id="form">
+  <span class="title">Create an Account!</span>
+
+  <form id="formulario">
+    <input type="text" id="nome" placeholder="First name" class="txt">
+    <input type="text" id="fone" placeholder="Phone" class="txt phone">
+    <br>
+    <input type="text" id="email" placeholder="Email Address" class="txt">
+    <br>
+    <input type="password" id="pswd" placeholder="Password" class="txt" onblur="senha()">
+    <input type="password" id="rpswd" placeholder="Repeat Password" class="txt" onblur="senha()">
+    <span id="erromsg">Passwords don't match.</span>
+
+
+    <input type="button" value="Register Account" id="registrar" class="botao" onclick="dados()">
+  </form>
+  <div id="redes">
+   <button class="botao" id="google"><img src="google.png">Register with Google</button>
+   <button class="botao" id="fb"><img src="fb.png">Register with Facebook</button>
+  </div>
+  <div id="links">
+  <a href="#">Forgot Password?</a><br>
+  <a href="#">Already have an account? Login!</a>
+</div>
+  </div>
+</div>
+</div>  
+</body>
+</html>
